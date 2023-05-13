@@ -9,7 +9,8 @@ function Avatar(props) {
   const avatarStyle = useMemo(() => {
     return {
       ...$container,
-      backgroundColor: color ? color : '#000000'
+      backgroundColor: color ? color : '#000000',
+      borderColor: color ? color : '#000000',
     }
   }, [color])
 

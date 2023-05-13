@@ -5,14 +5,12 @@ export default {
   component: Avatar,
   tags: ['autodocs'],
   argTypes: {
-    image: { control: 'text' },
-    alt: { control: 'text' }
+    color: { control: 'color' }
   }
 }
 
 export const Primary = {
   args: {
-    image: 'https://yt3.googleusercontent.com/ytc/AGIKgqNGxs8XAfudsOFr9KhpeQ_JwoIcvSJFLVRQeASp9g=s900-c-k-c0x00ffffff-no-rj',
-    alt: 'Smile face'
+    color: '#47d5bc'
   }
 }
