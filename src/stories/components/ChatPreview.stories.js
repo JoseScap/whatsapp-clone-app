@@ -6,7 +6,7 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     name: { control: 'text' },
-    color: { control: 'color' },
+    avatarColor: { control: 'color' },
     lastMessage: { control: 'color' },
   }
 }
@@ -14,7 +14,7 @@ export default {
 export const Primary = {
   args: {
     name: 'Jhon Doe',
-    color: '#47d5bc',
+    avatarColor: '#47d5bc',
     lastMessage: 'Lorem ipsum dolor'
   }
 }

@@ -2,12 +2,12 @@ import Avatar from './Avatar'
 import PropTypes from 'prop-types'
 
 function ChatPreview(props) {
-  const { name, color, lastMessage } = props
+  const { name, avatarColor, lastMessage } = props
 
   return <div className={$containerClasses} style={$containerStyle}>
     <div className={$itemsWrapper}>
       <Avatar
-        color={color}
+        color={avatarColor}
         size={56}
       />
       <div className={$previewWrapper}>
@@ -18,7 +18,7 @@ function ChatPreview(props) {
   </div>
 }
 
-const $containerClasses = 'border h-20 px-4 bg-gray-700'
+const $containerClasses = 'border-b border-gray-600 h-20 px-4 bg-gray-700'
 const $containerStyle = { maxHeight: 80 }
 
 const $itemsWrapper = 'flex h-full w-full items-center'
@@ -29,7 +29,7 @@ const $name = 'font-bold'
 
 ChatPreview.propTypes = {
   name: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  avatarColor: PropTypes.string.isRequired,
   lastMessage: PropTypes.string.isRequired
 }
 
