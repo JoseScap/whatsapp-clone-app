@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 
 function Avatar(props) {
   // Props --------------------------------------
-  const { color } = props
+  const { color, size } = props
 
   // Hooks --------------------------------------
   const avatarStyle = useMemo(() => {
@@ -11,8 +11,9 @@ function Avatar(props) {
       ...$containerStyle,
       backgroundColor: color ? color : '#000000',
       borderColor: color ? color : '#000000',
+      width: size ? size : undefined
     }
-  }, [color])
+  }, [color, size])
 
   return <div className={$containerClasses} style={avatarStyle}>
     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-user" width="60" height="60" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -30,7 +31,8 @@ const $containerStyle = {
 }
 
 Avatar.propTypes = {
-  color: PropTypes.string
+  color: PropTypes.string,
+  size: PropTypes.number
 }
 
 export default Avatar
