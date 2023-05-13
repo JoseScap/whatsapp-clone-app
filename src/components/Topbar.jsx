@@ -10,7 +10,7 @@ function Topbar(props) {
         color={color}
         size={40}
       />
-      <h2 className={$name}>{name}</h2>
+      <h2>{name}</h2>
     </div>
   </div>
 }
@@ -19,8 +19,6 @@ const $containerClasses = 'border h-16 px-4 bg-gray-700'
 const $containerStyle = { maxHeight: 80 }
 
 const $itemsWrapper = 'flex h-full w-full items-center justify-between'
-
-const $name = 'text-white'
 
 Topbar.propTypes = {
   name: PropTypes.string.isRequired,
