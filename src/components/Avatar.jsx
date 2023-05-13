@@ -8,13 +8,13 @@ function Avatar(props) {
   // Hooks --------------------------------------
   const avatarStyle = useMemo(() => {
     return {
-      ...$container,
+      ...$containerStyle,
       backgroundColor: color ? color : '#000000',
       borderColor: color ? color : '#000000',
     }
   }, [color])
 
-  return <div style={avatarStyle}>
+  return <div className={$containerClasses} style={avatarStyle}>
     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-user" width="60" height="60" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
@@ -23,18 +23,10 @@ function Avatar(props) {
   </div>
 }
 
-const $container = {
-  borderRadius: '50%',
-  display: 'inline-flex',
+const $containerClasses = 'rounded-full inline-flex border overflow-hidden w-full justify-center items-center text-white'
+const $containerStyle = {
   aspectRatio: '1/1',
-  border: '1px solid black',
-  overflow: 'hidden',
-  width: '100%',
   maxWidth: 80,
-  justifyContent: 'center',
-  alignItems: 'center',
-  color: 'white',
-  backgroundColor: '#000000'
 }
 
 Avatar.propTypes = {
