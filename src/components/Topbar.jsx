@@ -1,14 +1,30 @@
 import Avatar from './Avatar'
+import PropTypes from 'prop-types'
 
-function Topbar() {
-  return <div style={{
-    border: '1px solid black'
-  }}>
-    <Avatar
-      image="https://yt3.googleusercontent.com/ytc/AGIKgqNGxs8XAfudsOFr9KhpeQ_JwoIcvSJFLVRQeASp9g=s900-c-k-c0x00ffffff-no-rj"
-      alt="Vercel's Logo"    
-    />
+function Topbar(props) {
+  const { name, color } = props
+
+  return <div className={$containerClasses} style={$containerStyle}>
+    <div className={$itemsWrapper}>
+      <Avatar
+        color={color}
+        size={40}
+      />
+      <h2 className={$name}>{name}</h2>
+    </div>
   </div>
+}
+
+const $containerClasses = 'border h-16 px-4 bg-gray-700'
+const $containerStyle = { maxHeight: 80 }
+
+const $itemsWrapper = 'flex h-full w-full items-center justify-between'
+
+const $name = 'text-white'
+
+Topbar.propTypes = {
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired
 }
 
 export default Topbar

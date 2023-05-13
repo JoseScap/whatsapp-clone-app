@@ -31,8 +31,8 @@ const $containerStyle = {
 }
 
 Avatar.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.number
+  color: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired
 }
 
 export default Avatar
