@@ -22,7 +22,7 @@ const $containerClasses = 'border h-20 px-4 bg-gray-700'
 const $containerStyle = { maxHeight: 80 }
 
 const $itemsWrapper = 'flex h-full w-full items-center'
-const $previewWrapper = 'h-14 ml-4 flex-grow flex flex-col justify-between'
+const $previewWrapper = 'h-14 ml-4 flex-grow flex flex-col justify-between text-white'
 const $name = 'font-bold'
 
 

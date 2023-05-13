@@ -18,7 +18,7 @@ function Topbar(props) {
 const $containerClasses = 'border h-16 px-4 bg-gray-700'
 const $containerStyle = { maxHeight: 80 }
 
-const $itemsWrapper = 'flex h-full w-full items-center justify-between'
+const $itemsWrapper = 'flex h-full w-full items-center justify-between text-white'
 
 Topbar.propTypes = {
   name: PropTypes.string.isRequired,
