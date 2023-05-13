@@ -12,7 +12,7 @@ function ChatPreview(props) {
       />
       <div className={$previewWrapper}>
         <h2 className={$name}>{name}</h2>
-        <p>{lastMessage}</p>
+        <p className={$lastMessage}>{lastMessage}</p>
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@ const $containerStyle = { maxHeight: 80 }
 const $itemsWrapper = 'flex h-full w-full items-center'
 const $previewWrapper = 'h-14 ml-4 flex-grow flex flex-col justify-between text-white'
 const $name = 'font-bold'
-
+const $lastMessage = 'line-clamp-1'
 
 
 ChatPreview.propTypes = {

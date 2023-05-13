@@ -18,3 +18,14 @@ export const Primary = {
     lastMessage: 'Lorem ipsum dolor'
   }
 }
+
+export const PrimaryWithClamp = {
+  args: {
+    name: 'Jhon Doe',
+    avatarColor: '#47d5bc',
+    lastMessage: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Tempora laudantium sapiente eaque consequatur debitis officiis, ut possimus
+    necessitatibus modi recusandae temporibus cum in suscipit sequi? Neque sint
+    natus cumque tempore.`
+  }
+}
