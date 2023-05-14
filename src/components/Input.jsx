@@ -17,12 +17,12 @@ function Input(props) {
       className={$inputClasses}
       style={$inputStyle}
       value={value}
-      onChange={onChange}
+      onChange={(event) => onChange(event.target.value)}
     />
   </div>
 }
 
-const $container = 'border bg-gray-400 rounded-lg h-9 overflow-hidden flex flex-row items-center px-4'
+const $container = 'bg-gray-400 rounded-lg h-9 overflow-hidden flex flex-row items-center px-4'
 
 const $inputClasses = 'outline-none h-full w-full bg-transparent text-gray-100'
 const $inputStyle = {
