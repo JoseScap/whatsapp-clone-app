@@ -1,4 +1,5 @@
 import { LeftSidebar } from '../../components';
+import { v4 } from 'uuid'
 
 export default {
   title: 'Components/LeftSidebar',
@@ -17,29 +18,134 @@ export const Primary = {
     avatarColor: '#47d5bc',
     chatList: [
       {
-        uuid: 1,
+        uuid: v4(),
         avatarColor: '#47d5bc',
         name: 'Jhon Doe',
         lastMessage: 'Lorem ipsum dolor'
       },
       {
-        uuid: 2,
+        uuid: v4(),
         avatarColor: '#47d5bc',
         name: 'Jane Doe',
         lastMessage: 'Lorem ipsum dolor'
       },
       {
-        uuid: 3,
+        uuid: v4(),
         avatarColor: '#47d5bc',
         name: 'Jack Doe',
         lastMessage: 'Lorem ipsum dolor'
       },
       {
-        uuid: 4,
+        uuid: v4(),
         avatarColor: '#47d5bc',
         name: 'Jhon De',
         lastMessage: 'Lorem ipsum dolor'
       }
+    ]
+  }
+}
+
+export const PrimaryWithScroll = {
+  args: {
+    name: 'Juan',
+    avatarColor: '#47d5bc',
+    chatList: [
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jhon Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jane Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jack Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jhon De',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jhon Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jane Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jack Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jhon De',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jhon Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jane Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jack Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jhon De',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jhon Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jane Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jack Doe',
+        lastMessage: 'Lorem ipsum dolor'
+      },
+      {
+        uuid: v4(),
+        avatarColor: '#47d5bc',
+        name: 'Jhon De',
+        lastMessage: 'Lorem ipsum dolor'
+      },
     ]
   }
 }

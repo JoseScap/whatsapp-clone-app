@@ -16,8 +16,10 @@ function LeftSidebar(props) {
     setFilter(value)
   }
 
-  return <div className="min-h-screen bg-gray-700">
-    <Topbar avatarColor={avatarColor} name={name} />
+  return <div className={$container}>
+    <div>
+      <Topbar avatarColor={avatarColor} name={name} />
+    </div>
     <div className={$inputWrapper}>
       <Input
         value={filter}
@@ -25,13 +27,19 @@ function LeftSidebar(props) {
         search
       />
     </div>
-    <ChatList
-      chatList={filteredChatlist}
-    />
+    <div className={$chatListWrapper}>
+      <ChatList
+        chatList={filteredChatlist}
+      />
+    </div>
   </div>
 }
 
+const $container = 'h-screen border border-black overflow-hidden flex flex-col bg-gray-700'
+
 const $inputWrapper = 'px-4 pt-4'
+
+const $chatListWrapper = 'overflow-y-auto'
 
 LeftSidebar.propTypes = {
   name: PropTypes.string.isRequired,
