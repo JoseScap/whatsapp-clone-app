@@ -1,44 +1,23 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import ChatList from './ChatList'
 import Input from './Input'
 import Topbar from './Topbar'
+import PropTypes from 'prop-types'
 
-const chatList = [
-  {
-    uuid: 1,
-    avatarColor: '#47d5bc',
-    name: 'Jhon Doe',
-    lastMessage: 'Lorem ipsum dolor'
-  },
-  {
-    uuid: 2,
-    avatarColor: '#47d5bc',
-    name: 'Jhon Doe',
-    lastMessage: 'Lorem ipsum dolor'
-  },
-  {
-    uuid: 3,
-    avatarColor: '#47d5bc',
-    name: 'Jhon Doe',
-    lastMessage: 'Lorem ipsum dolor'
-  },
-  {
-    uuid: 4,
-    avatarColor: '#47d5bc',
-    name: 'Jhon Doe',
-    lastMessage: 'Lorem ipsum dolor'
-  }
-]
+function LeftSidebar(props) {
+  const { name, avatarColor, chatList } = props
 
-function LeftSidebar() {
   const [filter, setFilter] = useState('')
+  const filteredChatlist = useMemo(() => {
+    return chatList.filter(chat => chat.name.includes(filter))
+  }, [filter, chatList])
 
   const handleChangeFilter = (value) => {
     setFilter(value)
   }
 
   return <div className="min-h-screen bg-gray-700">
-    <Topbar avatarColor="#47d5bc" name="Juan" />
+    <Topbar avatarColor={avatarColor} name={name} />
     <div className={$inputWrapper}>
       <Input
         value={filter}
@@ -47,11 +26,17 @@ function LeftSidebar() {
       />
     </div>
     <ChatList
-      chatList={chatList}
+      chatList={filteredChatlist}
     />
   </div>
 }
 
 const $inputWrapper = 'px-4 pt-4'
+
+LeftSidebar.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatarColor: PropTypes.string.isRequired,
+  chatList: PropTypes.array.isRequired
+}
 
 export default LeftSidebar
