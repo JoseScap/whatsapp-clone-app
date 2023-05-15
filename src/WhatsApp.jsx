@@ -4,9 +4,7 @@ import { v4 } from 'uuid'
 function App() {
   return (
     <div className="flex">
-      <div style={{
-        maxWidth: 500
-      }}>
+      <div className="w-full max-w-md">
         <LeftSidebar
           name="Jhon Doe"
           avatarColor="#47d5bc"
