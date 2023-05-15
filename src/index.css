@@ -8,6 +8,11 @@ h1, h2, h3, h4, h5, h6, p, span {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.chat-area {
+    padding: 30px 40px;
+    background: url('http://forums.crackberry.com/attachments/blackberry-10-wallpapers-f308/137432d1361639896t-z10-wallpaper-set-z10-music.jpg');
+}
+
 .bubble {
     width: 100%;
     max-width: 500px;
