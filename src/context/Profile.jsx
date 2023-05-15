@@ -20,7 +20,7 @@ const initialContext = {
 
 export const ProfileContext = createContext(initialContext)
 
-export function WhatsappProvider(props) {
+export function ProfileProvider(props) {
   const { children } = props
 
   const [name, setName] = useState(initialContext.name)
@@ -51,6 +51,6 @@ export function WhatsappProvider(props) {
   </ProfileContext.Provider>
 }
 
-WhatsappProvider.propTypes = {
+ProfileProvider.propTypes = {
   children: PropTypes.func
 }
