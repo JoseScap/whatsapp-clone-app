@@ -1,21 +1,17 @@
 import { ChatArea, LeftSidebar, Topbar } from './components'
 import { v4 } from 'uuid'
+import useProfile from './context/use-profile'
 
 function App() {
+  const { name: selfUsername, chatList, avatarColor: profileAvatarColor } = useProfile()
+
   return (
     <div className="flex">
       <div className="w-full max-w-md">
         <LeftSidebar
-          name="Jhon Doe"
-          avatarColor="#47d5bc"
-          chatList={[
-            {
-              uuid: v4(),
-              avatarColor: '#ff4785',
-              name: 'Jane Doe',
-              lastMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-            }
-          ]}
+          name={selfUsername}
+          avatarColor={profileAvatarColor}
+          chatList={chatList}
         />
       </div>
       <div className="flex-grow flex flex-col">
