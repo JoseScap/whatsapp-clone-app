@@ -35,7 +35,7 @@ function LeftSidebar(props) {
   </div>
 }
 
-const $container = 'h-screen border border-black overflow-hidden flex flex-col bg-gray-700'
+const $container = 'h-screen overflow-hidden flex flex-col bg-gray-700'
 
 const $inputWrapper = 'px-4 pt-4'
 

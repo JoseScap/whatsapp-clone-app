@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 function ChatArea(props) {
   const { messages = [] } = props
 
-  return <div className="w-full border chat-area">
+  return <div className="w-full h-full chat-area">
     {
       messages.map((message) => (
         <div key={message.uuid} className={message.mine ? 'flex justify-end' : 'flex'}>
