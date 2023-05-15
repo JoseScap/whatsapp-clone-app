@@ -10,7 +10,17 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 .chat-area {
     padding: 30px 40px;
-    background: url('http://forums.crackberry.com/attachments/blackberry-10-wallpapers-f308/137432d1361639896t-z10-wallpaper-set-z10-music.jpg');
+    position: relative;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('http://forums.crackberry.com/attachments/blackberry-10-wallpapers-f308/137432d1361639896t-z10-wallpaper-set-z10-music.jpg');
+    z-index: -1;
 }
 
 .bubble {

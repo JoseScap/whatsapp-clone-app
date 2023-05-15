@@ -7,6 +7,7 @@ function App() {
 
   return (
     <div className="flex">
+      <div className="background-image"></div>
       <div className="w-full max-w-md">
         <LeftSidebar
           name={selfUsername}
@@ -14,14 +15,64 @@ function App() {
           chatList={chatList}
         />
       </div>
-      <div className="flex-grow flex flex-col">
-        <Topbar
-          name={'Jane Doe'}
-          avatarColor="#ff4785"
-        />
-        <div className="flex-grow">
+      <div className="flex-grow flex flex-col h-screen overflow-hidden">
+        <div>
+          <Topbar
+            name={'Jane Doe'}
+            avatarColor="#ff4785"
+          />
+        </div>
+        <div className="overflow-y-auto">
           <ChatArea
             messages={[
+              {
+                uuid: v4(),
+                username: 'Jane Doe',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                timestamp: '10:20 pm',
+                mine: false
+              },
+              {
+                uuid: v4(),
+                username: 'John Doe',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                timestamp: '05:18 am',
+                mine: true
+              },
+              {
+                uuid: v4(),
+                username: 'John Doe',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                timestamp: '05:18 am',
+                mine: true
+              },
+              {
+                uuid: v4(),
+                username: 'Jane Doe',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                timestamp: '10:20 pm',
+                mine: false
+              },
+              {
+                uuid: v4(),
+                username: 'Jane Doe',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                timestamp: '10:20 pm',
+                mine: false
+              },{
+                uuid: v4(),
+                username: 'Jane Doe',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                timestamp: '10:20 pm',
+                mine: false
+              },
+              {
+                uuid: v4(),
+                username: 'John Doe',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                timestamp: '05:18 am',
+                mine: true
+              },
               {
                 uuid: v4(),
                 username: 'Jane Doe',
