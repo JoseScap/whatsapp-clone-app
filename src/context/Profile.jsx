@@ -1,20 +1,13 @@
 import { createContext, useCallback, useState } from 'react';
-import { v4 } from 'uuid';
 import PropTypes from 'prop-types'
+import { chatList } from '../mock/profile';
 
 const initialContext = {
   name:'Jhon Doe',
   changeName: () => {},
   avatarColor:'#47d5bc',
   changeAvatarColor: () => {},
-  chatList: [
-    {
-      uuid: v4(),
-      avatarColor: '#ff4785',
-      name: 'Jane Doe',
-      lastMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-    }
-  ],
+  chatList: chatList,
   changeChatList: () => {}
 }
 
