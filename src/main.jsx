@@ -1,13 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import WhatsApp from './WhatsApp.jsx'
+import { ProfileProvider } from './context/Profile.context.jsx'
+import { ChatProvider } from './context/Chat.context.jsx'
 import './index.css'
-import { ProfileProvider } from './context/Profile.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ProfileProvider>
-      <WhatsApp />
+      <ChatProvider>
+        <WhatsApp />
+      </ChatProvider>
     </ProfileProvider>
   </React.StrictMode>,
 )

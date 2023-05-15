@@ -1,10 +1,10 @@
 import { ChatArea, LeftSidebar, Topbar } from './components'
-import { v4 } from 'uuid'
+import useChat from './context/use-chat'
 import useProfile from './context/use-profile'
-import { messages } from './mock/chatArea'
 
 function App() {
   const { name: selfUsername, chatList, avatarColor: profileAvatarColor } = useProfile()
+  const { name: chatName, avatarColor: chatAvatarColor, messages } = useChat()
 
   return (
     <div className="flex">
@@ -19,8 +19,8 @@ function App() {
       <div className="flex-grow flex flex-col h-screen overflow-hidden">
         <div>
           <Topbar
-            name={'Jane Doe'}
-            avatarColor="#ff4785"
+            name={chatName}
+            avatarColor={chatAvatarColor}
           />
         </div>
         <div className="overflow-y-auto">

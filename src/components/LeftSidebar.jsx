@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import ChatList from './ChatList'
 import Input from './Input'
 import Topbar from './Topbar'
@@ -8,9 +8,7 @@ function LeftSidebar(props) {
   const { name, avatarColor, chatList } = props
 
   const [filter, setFilter] = useState('')
-  const filteredChatlist = useMemo(() => {
-    return chatList.filter(chat => chat.name.includes(filter))
-  }, [filter, chatList])
+  const filteredChatlist = chatList.filter(chat => chat.name.includes(filter))
 
   const handleChangeFilter = (value) => {
     setFilter(value)
