@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 function Input(props) {
-  const { search = false, value, onChange } = props
+  const { search = false, value, onChange, name, type, required } = props
 
   return <div className={$container}>
     {
@@ -14,10 +14,13 @@ function Input(props) {
       )
     }
     <input
+      type={type}
       className={$inputClasses}
       style={$inputStyle}
       value={value}
-      onChange={(event) => onChange(event.target.value)}
+      onChange={(event) => onChange(event.target.value, event.target.name)}
+      name={name}
+      required={required}
     />
   </div>
 }
@@ -32,7 +35,10 @@ const $inputStyle = {
 Input.propTypes = {
   search: PropTypes.bool,
   value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  type: PropTypes.string,
+  required: PropTypes.bool
 }
 
 export default Input
