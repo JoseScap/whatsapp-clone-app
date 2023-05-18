@@ -13,6 +13,14 @@ h1, h2, h3, h4, h5, h6, p, span {
     position: relative;
 }
 
+.text-whatsapp {
+    color: #25D366;
+}
+
+.bg-whatsapp {
+    background-color: #25D366;
+}
+
 .background-image {
     position: fixed;
     top: 0;
